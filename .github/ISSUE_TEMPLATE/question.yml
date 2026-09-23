@@ -1,0 +1,25 @@
+name: ❓ Question
+description: Poser une question
+title: "[Question] "
+labels: ["question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexte
+    validations:
+      required: false
+
+  - type: input
+    id: reference
+    attributes:
+      label: Document(s) consulté(s)
+    validations:
+      required: false
