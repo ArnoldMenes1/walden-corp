@@ -1,0 +1,67 @@
+name: 🐛 Bug
+description: Signaler un bug
+title: "[Bug] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de signaler ce bug. Remplis toutes les sections.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Décris le bug en quelques phrases.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Étapes de reproduction
+      description: Comment reproduire le bug ?
+      placeholder: |
+        1. Ouvrir…
+        2. Cliquer sur…
+        3. Observer…
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportement attendu
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportement observé
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: "1.0.1"
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environnement
+      placeholder: "OS, navigateur, runtime…"
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / captures
+      render: shell
+    validations:
+      required: false
