@@ -1,0 +1,46 @@
+name: ✨ Fonctionnalité
+description: Demander une nouvelle fonctionnalité
+title: "[Feature] "
+labels: ["feature", "triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problème à résoudre
+      description: Quel problème cette fonctionnalité résout-elle ?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solution proposée
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considérées
+    validations:
+      required: false
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact estimé
+      description: Qui est concerné ? Quel effort ?
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Vérifications préalables
+      options:
+        - label: J'ai vérifié que cette fonctionnalité n'existe pas déjà
+          required: true
+        - label: J'ai consulté la roadmap
+          required: false
+        - label: J'ai consulté la Constitution
+          required: false
