@@ -42,3 +42,57 @@ Ce dépôt **ne contient pas de code applicatif**. Il définit ce qui doit être
 ---
 
 ## Structure du dépôt
+
+walden-corp/
+├── foundation/ Constitution, standards, spécifications, IA
+
+├── knowledge/ Connaissance métier (domaines, concepts, modèles)
+
+├── decisions/ ADR et RFC
+
+├── policies/ Politiques officielles
+
+├── meta/ Méta-données (taxonomie, index, conventions)
+
+├── packages/ Packages techniques (ds-tokens, ds-react, ds-flutter, cli)
+
+├── apps/ Applications (docs-site, playground)
+
+├── assets/ Logos, icônes, illustrations, images
+
+├── diagrams/ Schémas et diagrammes
+
+├── scripts/ Scripts d'automatisation
+
+└── legal/ Mentions légales et licences tierces
+
+
+La carte complète est décrite dans [`meta/repository-map.md`](./meta/repository-map.md).
+
+---
+
+## Règles fondamentales
+
+1. **Aucune information ne peut contredire la Constitution.** Voir [`foundation/constitution/`](./foundation/constitution/).
+2. **Toute contribution suit le processus RFC ou ADR.** Voir [`CONTRIBUTING.md`](./CONTRIBUTING.md) et [`decisions/`](./decisions/).
+3. **Aucune décision majeure sans traçabilité.** Voir [`decisions/decisions-log.md`](./decisions/decisions-log.md).
+4. **Les agents IA se réfèrent à `meta/ai-index.md`** avant toute génération.
+
+---
+
+## Licence
+
+Voir [`LICENSE.md`](./LICENSE.md).
+
+---
+
+## Gouvernance
+
+La gouvernance du dépôt et de ses contenus est définie dans [`GOVERNANCE.md`](./GOVERNANCE.md).
+
+---
+
+## Contact
+
+- Canal interne : `#walden-foundation`
+- Email : `foundation@waldencorp.com`
