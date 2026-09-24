@@ -1,0 +1,40 @@
+.wc-spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: currentColor;
+}
+
+.wc-spinner--xs { width: 12px; height: 12px; }
+.wc-spinner--sm { width: 16px; height: 16px; }
+.wc-spinner--md { width: 20px; height: 20px; }
+.wc-spinner--lg { width: 32px; height: 32px; }
+
+.wc-spinner__svg {
+  width: 100%;
+  height: 100%;
+  animation: wc-spinner-rotate 800ms linear infinite;
+}
+
+@keyframes wc-spinner-rotate {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wc-spinner__svg {
+    animation-duration: 1500ms;
+  }
+}
+
+/* Utilitaire accessible */
+.wc-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
