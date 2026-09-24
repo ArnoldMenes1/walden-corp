@@ -1,0 +1,20 @@
+.wc-grid { display: grid; }
+
+.wc-grid--gap-0  { gap: var(--spacing-0); }
+.wc-grid--gap-1  { gap: var(--spacing-1); }
+.wc-grid--gap-2  { gap: var(--spacing-2); }
+.wc-grid--gap-3  { gap: var(--spacing-3); }
+.wc-grid--gap-4  { gap: var(--spacing-4); }
+.wc-grid--gap-5  { gap: var(--spacing-5); }
+.wc-grid--gap-6  { gap: var(--spacing-6); }
+.wc-grid--gap-8  { gap: var(--spacing-8); }
+.wc-grid--gap-10 { gap: var(--spacing-10); }
+.wc-grid--gap-12 { gap: var(--spacing-12); }
+
+/* Colonnes responsives par défaut : 4 mobile, 8 tablette, 12 desktop */
+@media (max-width: 767px) {
+  .wc-grid[data-columns] { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .wc-grid[data-columns] { grid-template-columns: repeat(8, minmax(0, 1fr)) !important; }
+}
