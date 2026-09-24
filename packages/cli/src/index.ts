@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { Command } from 'commander';
 import { createCommand } from './commands/create.js';
 import { addCommand } from './commands/add.js';
@@ -11,7 +12,7 @@ const program = new Command();
 program
   .name('walden')
   .description('CLI officielle du Design System Walden Corp')
-  .version('1.0.1');
+  .version('1.0.1', '-v, --version', 'Affiche la version du CLI');
 
 program.addCommand(createCommand);
 program.addCommand(addCommand);
@@ -20,4 +21,7 @@ program.addCommand(auditCommand);
 program.addCommand(migrateCommand);
 program.addCommand(figmaCommand);
 
-program.parse();
+program.parseAsync(process.argv).catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
