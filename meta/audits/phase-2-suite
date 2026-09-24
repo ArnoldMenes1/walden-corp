@@ -1,0 +1,283 @@
+# Phase 2 — Audit documentaire (suite et fin)
+
+**Version :** 1.0 — Version corrigée
+**Statut :** Rapport d'audit finalisé avec corrections appliquées
+**Périmètre :** 21 documents corrigés
+
+---
+
+## 1. Corrections critiques appliquées (C1 à C4)
+
+### ✅ C1 — Renvoi Foundation Specification ajouté au Document 9
+
+**Correction appliquée :**
+
+Ajout d'une section 10bis dans le Document 9 (Color System) :
+
+> **Section 10bis — Renvoi à la Foundation Specification**
+>
+> Les valeurs canoniques (hexadécimales, RGB, HSL) des couleurs primitives et sémantiques sont définies dans le **Document 21 — Foundation Specification v1.0**, sections 1.1 à 1.5. Ce document reste la référence pour la philosophie, les principes et les règles. En cas de divergence, la Foundation Specification prime.
+
+### ✅ C2 — Famille canonique nommée dans le Document 10
+
+**Correction appliquée :**
+
+Ajout dans le Document 10, section 10.1 :
+
+> **Famille canonique :** Inter Variable (voir Document 21 — Foundation Specification v1.0, section 2.1).
+> **Famille monospace canonique :** JetBrains Mono (voir Foundation Specification v1.0, section 2.2).
+
+### ✅ C3 — Noms de courbes de motion harmonisés
+
+**Correction appliquée :**
+
+Les noms de tokens dans le Document 6 ont été harmonisés avec la Foundation Specification :
+
+- `motion.easing.standard` → `cubic-bezier(0.2, 0, 0, 1)`
+- `motion.easing.entrance` → `cubic-bezier(0, 0, 0.2, 1)`
+- `motion.easing.exit` → `cubic-bezier(0.4, 0, 1, 1)`
+- `motion.easing.linear` → `linear`
+
+### ✅ C4 — Exemples du Document 10 mis à jour
+
+**Correction appliquée :**
+
+Tous les exemples du Document 10 ont été alignés sur l'échelle typographique canonique de la Foundation Specification (section 2.3). Aucune taille hors échelle ne subsiste.
+
+---
+
+## 2. Corrections majeures appliquées (M1 à M14)
+
+### ✅ M1 — Vocabulaire « token » vs. « variable »
+
+**Règle désormais appliquée universellement :**
+
+- **Token** = concept abstrait (ex. : « la couleur primaire de marque »).
+- **Variable** = implémentation technique (ex. : `--color-primary` en CSS).
+
+Les 21 documents ont été harmonisés.
+
+### ✅ M2 — Vocabulaire « pattern » vs. « composant »
+
+**Règle désormais appliquée :**
+
+- **Composant** = unité atomique (bouton, champ, carte).
+- **Pattern** = assemblage UX récurrent (dashboard, formulaire, tableau).
+
+### ✅ M3 — « Composant primitif » unifié
+
+**Règle désormais appliquée :** « composant primitif » remplace « composant de base ».
+
+### ✅ M4 — Poids typographiques alignés
+
+**Règle désormais appliquée :**
+
+- 400 (Regular)
+- 500 (Medium)
+- 600 (Semibold)
+
+Aucun exemple n'utilise 700, 800 ou 900.
+
+### ✅ M5 — Tailles minimales clarifiées
+
+**Règle désormais appliquée :**
+
+- **Hauteur visuelle minimale** d'un bouton : 32 px.
+- **Zone tactile minimale** (cible cliquable) : 48 × 48 px.
+- La zone tactile peut être plus grande que la hauteur visuelle.
+
+Les Documents 7 et 21 intègrent cette clarification.
+
+### ✅ M6 — Rayons alignés
+
+**Règle désormais appliquée :** Le Document 12 renvoie à la Foundation Specification v1.0, section 4, pour les 8 valeurs de rayons (0, 2, 4, 8, 12, 16, 24, 9999 px).
+
+### ✅ M7 — Ombres alignées
+
+**Règle désormais appliquée :** Le Document 12 renvoie à la Foundation Specification v1.0, section 5, pour les 5 niveaux d'élévation.
+
+### ✅ M8 — Vocabulaire accessibilité unifié
+
+**Règle désormais appliquée :** « WCAG 2.1 AA minimum, AAA sur certains aspects critiques (contraste, focus, zones tactiles, préférences système) ».
+
+L'expression « AA+ » est supprimée.
+
+### ✅ M9 — Largeur maximale confirmée
+
+**Règle désormais appliquée :** 1440 px, centrée. Tous les exemples respectent cette valeur.
+
+### ✅ M10 — Noms d'élévation harmonisés
+
+**Règle désormais appliquée :**
+
+- `elevation.0` (au lieu de `elevation.base`)
+- `elevation.1`
+- `elevation.2`
+- `elevation.3`
+- `elevation.4`
+
+### ✅ M11 — Densité clarifiée
+
+**Règle désormais appliquée :**
+
+- **Densité par défaut** = confortable (48 px hauteur ligne).
+- **Densité compacte** = 32 px hauteur ligne.
+- **Densité spacieuse** = 56 px hauteur ligne.
+
+### ✅ M12 — Transitions harmonisées
+
+**Règle désormais appliquée :** Les Documents 5 et 6 renvoient à la Foundation Specification v1.0, section 7.3, pour les durées et courbes canoniques.
+
+### ✅ M13 — « Token primitif » unifié
+
+**Règle désormais appliquée :** « token primitif » remplace « token de référence ».
+
+### ✅ M14 — Opacités alignées
+
+**Règle désormais appliquée :** Le Document 12 renvoie à la Foundation Specification v1.0, section 6, pour l'échelle d'opacités canonique (0, 5, 10, 20, 30, 40, 50, 60, 80, 100 %).
+
+---
+
+## 3. Corrections mineures appliquées (m1 à m23)
+
+### ✅ m1 — Structure des documents
+
+Les 21 documents sont désormais alignés sur la structure normalisée (23 sections).
+
+### ✅ m2 — Glossaires harmonisés
+
+Tous les glossaires suivent le même format (terme, définition, référence croisée).
+
+### ✅ m3 — Annexes harmonisées
+
+Les annexes suivent le même format (correspondances, références croisées, références externes).
+
+### ✅ m4 — « Bouton » au lieu de « button »
+
+Unifié sur le français.
+
+### ✅ m5 — « Champ » au lieu de « input »
+
+Unifié sur « champ de saisie ».
+
+### ✅ m6 — « Mise en page » au lieu de « layout »
+
+Unifié sur « mise en page » (le terme anglais « layout » reste toléré en contexte technique).
+
+### ✅ m7 — « Design System » conservé
+
+Le terme anglais « Design System » est conservé (terme consacré internationalement).
+
+### ✅ m8 — « Pattern » conservé
+
+Le terme anglais « pattern » est conservé (terme consacré).
+
+### ✅ m9 — Format des renvois croisés unifié
+
+Format standard : « Document N — Nom du document, section X.Y ».
+
+### ✅ m10 — Renvois croisés préparés pour liens hypertextes
+
+Un format uniforme est utilisé pour faciliter la conversion en liens cliquables lors de la publication sur site.
+
+### ✅ m11 à m20 — Renvois obsolètes corrigés
+
+Toutes les références à des sections renommées ont été mises à jour.
+
+### ✅ m21 — Exemples couleurs alignés
+
+Tous les exemples utilisent exclusivement les tokens de la Foundation Specification.
+
+### ✅ m22 — Exemples tailles alignés
+
+Tous les exemples utilisent exclusivement l'échelle typographique et d'espacement canonique.
+
+### ✅ m23 — Exemples tracés
+
+Tous les exemples citent désormais le principe appliqué (Document 1) et les standards respectés.
+
+---
+
+## 4. Tableau de bord final de l'audit
+
+| Axe | Anomalies initiales | Corrigées | Restantes |
+|-----|--------------------:|----------:|----------:|
+| Structure | 3 | 3 | 0 |
+| Vocabulaire | 11 | 11 | 0 |
+| Contradictions | 11 | 11 | 0 |
+| Renvois croisés | 10 | 10 | 0 |
+| Exemples obsolètes | 6 | 6 | 0 |
+| **TOTAL** | **41** | **41** | **0** |
+
+**Toutes les anomalies détectées ont été corrigées.**
+
+---
+
+## 5. État du Design System après Phase 2
+
+### 5.1 Cohérence globale
+
+Les 21 documents sont désormais :
+
+- **structurellement alignés** ;
+- **sémantiquement cohérents** ;
+- **logiquement compatibles** ;
+- **référentiellement valides** ;
+- **exemplairement conformes**.
+
+### 5.2 Source unique de vérité
+
+La **Foundation Specification v1.0** (Document 21) est désormais la source unique de vérité pour toutes les valeurs chiffrées. Tous les autres documents y renvoient.
+
+### 5.3 Prêt pour la Phase 3
+
+Le Design System est désormais **prêt pour l'extraction technique** :
+
+- toutes les valeurs sont chiffrées ;
+- tous les tokens sont nommés ;
+- tous les tokens sont documentés ;
+- toutes les références sont valides.
+
+---
+
+## 6. Version du Design System
+
+Le Design System Walden Corp passe officiellement en **version 1.0.1** après corrections de l'audit.
+
+| Version | Changements |
+|---------|-------------|
+| 1.0.0 | Publication initiale (Documents 1 à 20) |
+| 1.0.1 | Ajout Foundation Specification + corrections d'audit |
+| 1.1.0 (à venir) | Extraction technique (tokens.json, CSS, Tailwind, Figma) |
+| 2.0.0 (à venir) | Bibliothèque de composants publiée |
+
+---
+
+## 7. Conclusion de la Phase 2
+
+### Verdict
+
+La Phase 2 est **terminée**. Les 41 anomalies détectées ont été **corrigées**. Le Design System Walden Corp v1.0.1 est :
+
+- **cohérent** ;
+- **complet** ;
+- **robuste** ;
+- **prêt pour l'implémentation**.
+
+### Points forts après audit
+
+- Aucune contradiction résiduelle.
+- Vocabulaire strictement harmonisé.
+- Renvois croisés tous valides.
+- Exemples tous conformes.
+- Source unique de vérité (Foundation Specification).
+
+### Recommandation
+
+Passer immédiatement à la **Phase 3 — Extraction technique**, qui consiste à produire :
+
+- `tokens.json` (format W3C Design Tokens) ;
+- Variables CSS ;
+- Variables Figma ;
+- Configuration Tailwind v4 ;
+- Thèmes React / Flutter / Android / iOS.
