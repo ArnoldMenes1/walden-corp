@@ -1,0 +1,29 @@
+WaldenColors.xcassets/
+├── Contents.json
+├── Primary.colorset/
+│   └── Contents.json
+├── PrimaryLight.colorset/
+│   └── Contents.json
+├── PrimaryDark.colorset/
+│   └── Contents.json
+├── Silver.colorset/
+│   └── Contents.json
+├── DeepBlack.colorset/
+│   └── Contents.json
+├── White.colorset/
+│   └── Contents.json
+├── Gray50.colorset/
+├── Gray100.colorset/
+├── Gray200.colorset/
+├── Gray300.colorset/
+├── Gray400.colorset/
+├── Gray500.colorset/
+├── Gray600.colorset/
+├── Gray700.colorset/
+├── Gray800.colorset/
+├── Gray900.colorset/
+├── Gray950.colorset/
+├── Success.colorset/
+├── Warning.colorset/
+├── Error.colorset/
+└── Info.colorset/
