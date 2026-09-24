@@ -3,6 +3,7 @@ import { noHardcodedSpacing } from './no-hardcoded-spacing.js';
 import { noArbitraryFontSize } from './no-arbitrary-font-size.js';
 import { noUnknownComponent } from './no-unknown-component.js';
 import { noUnknownToken } from './no-unknown-token.js';
+import fs from 'fs-extra';
 
 export interface Violation {
   file: string;
@@ -29,7 +30,6 @@ export const rules: Rule[] = [
 ];
 
 export async function runRules(files: string[]): Promise<Violation[]> {
-  const fs = await import('fs-extra');
   const violations: Violation[] = [];
 
   for (const file of files) {
