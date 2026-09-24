@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- =========================================================
+     Walden Corp Design System — Colors Android v1.0.1
+     ========================================================= -->
+<resources>
+    <!-- Primitives -->
+    <color name="walden_blue_950">#0F2052</color>
+    <color name="walden_blue_800">#1E3A8A</color>
+    <color name="walden_blue_990">#081331</color>
+    <color name="walden_silver_300">#C0C0C0</color>
+    <color name="walden_silver_200">#E4E4E7</color>
+    <color name="walden_silver_400">#A1A1AA</color>
+    <color name="walden_black_900">#1C1C1E</color>
+    <color name="walden_white_0">#FFFFFF</color>
+
+    <color name="walden_gray_50">#FAFAFA</color>
+    <color name="walden_gray_100">#F4F4F5</color>
+    <color name="walden_gray_200">#E4E4E7</color>
+    <color name="walden_gray_300">#D4D4D8</color>
+    <color name="walden_gray_400">#A1A1AA</color>
+    <color name="walden_gray_500">#71717A</color>
+    <color name="walden_gray_600">#52525B</color>
+    <color name="walden_gray_700">#3F3F46</color>
+    <color name="walden_gray_800">#27272A</color>
+    <color name="walden_gray_900">#18181B</color>
+    <color name="walden_gray_950">#0F0F11</color>
+
+    <color name="walden_green_700">#15803D</color>
+    <color name="walden_green_100">#DCFCE7</color>
+    <color name="walden_amber_700">#B45309</color>
+    <color name="walden_amber_100">#FEF3C7</color>
+    <color name="walden_red_700">#B91C1C</color>
+    <color name="walden_red_100">#FEE2E2</color>
+    <color name="walden_info_500">#1D4ED8</color>
+    <color name="walden_info_100">#DBEAFE</color>
+</resources>
