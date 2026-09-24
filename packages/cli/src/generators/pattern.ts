@@ -1,8 +1,8 @@
 import fs from 'fs-extra';
 import path from 'node:path';
 
-export async function generatePattern(name: string, target: string) {
-  const dir = path.join(target, 'patterns', name);
+export async function generatePattern(name: string, target: string): Promise<void> {
+  const dir = path.join(target, name);
   await fs.ensureDir(dir);
 
   await fs.writeFile(
@@ -29,11 +29,11 @@ Pattern conforme au Design System Walden Corp.
 
 ## Usage
 
-…
+[Décrire l'usage.]
 
 ## Composition
 
-…
+[Lister les composants utilisés.]
 
 ## Références
 
