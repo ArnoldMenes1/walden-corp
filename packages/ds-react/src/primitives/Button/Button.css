@@ -1,0 +1,140 @@
+/* =========================================================
+   Walden Corp — Button
+   Source : Foundation Specification v1.0
+   ========================================================= */
+
+.wc-button {
+  /* Reset */
+  appearance: none;
+  border: none;
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  transition:
+    background-color var(--motion-duration-base) var(--motion-easing-standard),
+    color var(--motion-duration-base) var(--motion-easing-standard),
+    border-color var(--motion-duration-base) var(--motion-easing-standard),
+    box-shadow var(--motion-duration-base) var(--motion-easing-standard);
+  border-radius: var(--radius-md);
+  position: relative;
+}
+
+/* ---------- Focus visible (accessibilité) ---------- */
+.wc-button:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* ---------- Tailles ---------- */
+.wc-button--sm {
+  height: 32px;
+  padding: 0 var(--spacing-3);
+  font-size: var(--font-size-body-sm);
+}
+
+.wc-button--md {
+  height: 40px;
+  padding: 0 var(--spacing-4);
+  font-size: var(--font-size-body-sm);
+}
+
+.wc-button--lg {
+  height: 48px;
+  padding: 0 var(--spacing-5);
+  font-size: var(--font-size-body-md);
+}
+
+/* ---------- Variante primary ---------- */
+.wc-button--primary {
+  background-color: var(--color-action-primary);
+  color: var(--color-text-inverse);
+}
+.wc-button--primary:hover:not(:disabled) {
+  background-color: var(--color-action-primary-hover);
+}
+.wc-button--primary:active:not(:disabled) {
+  background-color: var(--color-action-primary-active);
+}
+
+/* ---------- Variante secondary ---------- */
+.wc-button--secondary {
+  background-color: var(--color-surface-base);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-default);
+}
+.wc-button--secondary:hover:not(:disabled) {
+  background-color: var(--color-surface-sunken);
+  border-color: var(--color-border-strong);
+}
+
+/* ---------- Variante ghost ---------- */
+.wc-button--ghost {
+  background-color: transparent;
+  color: var(--color-text-primary);
+}
+.wc-button--ghost:hover:not(:disabled) {
+  background-color: var(--color-surface-sunken);
+}
+
+/* ---------- Variante destructive ---------- */
+.wc-button--destructive {
+  background-color: var(--color-action-destructive);
+  color: var(--color-text-inverse);
+}
+.wc-button--destructive:hover:not(:disabled) {
+  filter: brightness(0.9);
+}
+
+/* ---------- Variante link ---------- */
+.wc-button--link {
+  background-color: transparent;
+  color: var(--color-text-link);
+  padding: 0;
+  height: auto;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.wc-button--link:hover:not(:disabled) {
+  text-decoration-thickness: 2px;
+}
+
+/* ---------- État disabled ---------- */
+.wc-button:disabled {
+  background-color: var(--color-surface-disabled);
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+  border-color: var(--color-surface-disabled);
+}
+
+/* ---------- Pleine largeur ---------- */
+.wc-button--full {
+  width: 100%;
+}
+
+/* ---------- Icônes ---------- */
+.wc-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.wc-button__spinner {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ---------- Réduction du mouvement ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .wc-button {
+    transition: none;
+  }
+}
