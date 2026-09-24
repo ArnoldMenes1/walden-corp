@@ -38,6 +38,12 @@ export type { IconProps, IconSize } from './primitives/Icon/Icon';
 export { Card } from './surfaces/Card/Card';
 export type { CardProps } from './surfaces/Card/Card';
 
+export { Panel } from './surfaces/Panel/Panel';
+export type { PanelProps } from './surfaces/Panel/Panel';
+
+export { Divider } from './surfaces/Divider/Divider';
+export type { DividerProps } from './surfaces/Divider/Divider';
+
 // Feedback
 export { Spinner } from './feedback/Spinner/Spinner';
 export type { SpinnerProps } from './feedback/Spinner/Spinner';
@@ -77,5 +83,22 @@ export type { BreadcrumbsProps, BreadcrumbItem } from './navigation/Breadcrumbs/
 export { Pagination } from './navigation/Pagination/Pagination';
 export type { PaginationProps } from './navigation/Pagination/Pagination';
 
-// Data (Partie 4)
-// Layout (Partie 4)
+// Data
+export { Table } from './data/Table/Table';
+export type { TableProps, TableColumn } from './data/Table/Table';
+
+export { List, ListItem } from './data/List/List';
+export type { ListProps, ListItemProps } from './data/List/List';
+
+export { Tag } from './data/Tag/Tag';
+export type { TagProps, TagVariant, TagSize } from './data/Tag/Tag';
+
+// Layout
+export { Container } from './layout/Container/Container';
+export type { ContainerProps } from './layout/Container/Container';
+
+export { Stack } from './layout/Stack/Stack';
+export type { StackProps } from './layout/Stack/Stack';
+
+export { Grid } from './layout/Grid/Grid';
+export type { GridProps } from './layout/Grid/Grid';
