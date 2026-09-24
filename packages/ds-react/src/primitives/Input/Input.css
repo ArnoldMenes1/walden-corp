@@ -1,0 +1,105 @@
+/* =========================================================
+   Walden Corp — Input
+   ========================================================= */
+
+.wc-input-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  font-family: var(--font-family-base);
+}
+
+.wc-input-wrapper--full {
+  width: 100%;
+}
+
+.wc-input__label {
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  line-height: 1.4;
+}
+
+.wc-input {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  background-color: var(--color-surface-base);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  transition:
+    border-color var(--motion-duration-base) var(--motion-easing-standard),
+    box-shadow var(--motion-duration-base) var(--motion-easing-standard);
+}
+
+.wc-input--sm { height: 32px; padding: 0 var(--spacing-3); }
+.wc-input--md { height: 40px; padding: 0 var(--spacing-4); }
+.wc-input--lg { height: 48px; padding: 0 var(--spacing-5); }
+
+.wc-input:hover:not(.wc-input--disabled) {
+  border-color: var(--color-border-strong);
+}
+
+.wc-input:focus-within {
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px rgba(15, 32, 82, 0.12);
+}
+
+.wc-input--error {
+  border-color: var(--color-border-error);
+}
+
+.wc-input--error:focus-within {
+  box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.12);
+}
+
+.wc-input--disabled {
+  background-color: var(--color-surface-disabled);
+  cursor: not-allowed;
+}
+
+.wc-input__field {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--color-text-primary);
+  font-family: inherit;
+  font-size: var(--font-size-body-md);
+  line-height: 1.5;
+  min-width: 0;
+}
+
+.wc-input__field::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.wc-input__field:disabled {
+  cursor: not-allowed;
+  color: var(--color-text-disabled);
+}
+
+.wc-input__icon {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.wc-input__error {
+  margin: 0;
+  font-size: var(--font-size-caption);
+  color: var(--color-state-error);
+  line-height: 1.4;
+}
+
+.wc-input__helper {
+  margin: 0;
+  font-size: var(--font-size-caption);
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wc-input { transition: none; }
+}
