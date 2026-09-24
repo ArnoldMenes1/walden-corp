@@ -55,5 +55,27 @@ export type { ToastItem, ToastVariant } from './feedback/Toast/ToastProvider';
 export { Modal } from './overlays/Modal/Modal';
 export type { ModalProps } from './overlays/Modal/Modal';
 
-// Navigation (Partie 3)
+export { Drawer } from './overlays/Drawer/Drawer';
+export type { DrawerProps, DrawerPosition } from './overlays/Drawer/Drawer';
+
+export { Popover } from './overlays/Popover/Popover';
+export type { PopoverProps } from './overlays/Popover/Popover';
+
+export { Tooltip } from './overlays/Tooltip/Tooltip';
+export type { TooltipProps } from './overlays/Tooltip/Tooltip';
+
+// Navigation
+export { Tabs, TabsList, Tab, TabPanel } from './navigation/Tabs/Tabs';
+export type { TabsProps, TabsListProps, TabProps, TabPanelProps } from './navigation/Tabs/Tabs';
+
+export { Sidebar, SidebarSection, SidebarItem } from './navigation/Sidebar/Sidebar';
+export type { SidebarProps, SidebarSectionProps, SidebarItemProps } from './navigation/Sidebar/Sidebar';
+
+export { Breadcrumbs } from './navigation/Breadcrumbs/Breadcrumbs';
+export type { BreadcrumbsProps, BreadcrumbItem } from './navigation/Breadcrumbs/Breadcrumbs';
+
+export { Pagination } from './navigation/Pagination/Pagination';
+export type { PaginationProps } from './navigation/Pagination/Pagination';
+
 // Data (Partie 4)
+// Layout (Partie 4)
