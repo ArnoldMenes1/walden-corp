@@ -110,22 +110,39 @@ Aucune décision ne contredit la Constitution.
 ## 7. Architecture de gouvernance
 Direction produit
 │
+
 ├── Comité design
+
 │ ├── Design System Owner
+
 │ ├── Design System Maintainers
+
 │ ├── Représentants produit
+
 │ └── Représentants accessibilité
+
 │
+
 ├── Comité technique
+
 │ ├── Technical System Owner
+
 │ ├── Front-End Maintainers
+
 │ ├── Back-End Maintainers
+
 │ └── QA Representative
+
 │
+
 └── Contributeurs
+
 ├── Designers
+
 ├── Développeurs
+
 ├── Product Managers
+
 └── IA génératives (sous supervision)
 
 ---
