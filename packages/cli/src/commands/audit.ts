@@ -6,28 +6,38 @@ import { logger } from '../utils/logger.js';
 
 export const auditCommand = new Command('audit')
   .description('Audite la conformité du projet au Design System')
-  .option('--json', 'Sortie JSON')
-  .option('--fix', 'Corrige automatiquement (si possible)')
+  .option('--json', 'Sortie JSON (pour CI)')
+  .option('--quiet', 'N\'affiche que le résumé')
   .action(async (options) => {
-    const files = await collectFiles(process.cwd());
+    const cwd = process.cwd();
+    const files = await collectFiles(cwd);
+
+    if (!options.quiet && !options.json) {
+      logger.info(`${files.length} fichiers analysés.`);
+    }
+
     const violations = await runRules(files);
 
     if (options.json) {
-      console.log(JSON.stringify(violations, null, 2));
-      return;
+      console.log(JSON.stringify({ violations, total: violations.length }, null, 2));
+      process.exit(violations.length > 0 ? 1 : 0);
     }
 
     if (violations.length === 0) {
       logger.success('Aucune violation détectée.');
-      return;
+      process.exit(0);
     }
 
-    logger.warn(`${violations.length} violation(s) détectée(s) :`);
-    violations.forEach((v) => {
-      logger.error(`  ${path.relative(process.cwd(), v.file)}:${v.line}`);
-      logger.error(`    ${v.message}`);
-      if (v.suggestion) logger.info(`    → ${v.suggestion}`);
-    });
+    logger.warn(`${violations.length} violation(s) détectée(s) :\n`);
 
-    if (violations.length > 0) process.exit(1);
+    if (!options.quiet) {
+      violations.forEach((v) => {
+        const rel = path.relative(cwd, v.file);
+        logger.error(`${rel}:${v.line}`);
+        logger.error(`   ${v.message}`);
+        if (v.suggestion) logger.info(`   → ${v.suggestion}`);
+      });
+    }
+
+    process.exit(1);
   });
