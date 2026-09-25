@@ -1,0 +1,18 @@
+Adobe général : github.com/adobe/spectrum-design-data
+ - css : github.com/adobe/spectrum-css
+ - react : github.com/adobe/react-spectrum
+ - web components : github.com/adobe/spectrum-web-components
+
+Microsoft : github.com/microsoft/fluentui
+
+IBM : github.com/carbon-design-system/carbon
+
+Apple : - github.com/realmaitreal/human-interface-guidelines
+- github.com/promptdora/higdesign
+
+Google : github.com/material-components/material-web
+
+Salesforce: github.com/salesforce-ux/design-system
+
+
+Shopify : github.com/shopify/polaris-tokens
